@@ -53,10 +53,16 @@ push:
       - name: Set-up gcloud SDK
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: poc-ad-target-env-413614
+          project_id: {{ secret.PROJECT_ID }}
 
       - name: Verifying Authentication
         run: gcloud auth list
 
       - name: Deploy to GCS
-        run: gsutil -r cp . gs://test-bucket
+        run: gsutil -r cp . gs://veera-demo-bucket
+
+      - name: Terraform Plan
+        run: terraform plan
+
+      - name: Terraform apply
+        run: terraform apply

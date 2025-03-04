@@ -1,4 +1,4 @@
 resource "google_storage_bucket" "test-bucket" {
-  name     = "your-unique-bucket-name"
+  name     = "veera-demo-bucket"
   location = "US"
 }
