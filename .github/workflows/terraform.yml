@@ -58,9 +58,6 @@ push:
       - name: Verifying Authentication
         run: gcloud auth list
 
-      - name: Deploy to GCS
-        run: gsutil -r cp . gs://veera-demo-bucket
-
       - name: Terraform Plan
         run: terraform plan
 
