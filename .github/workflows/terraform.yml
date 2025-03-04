@@ -28,3 +28,35 @@
 #
 #  - name: Deploy to GCS (Example)
 #    run: gsutil cp -r . gs://test-bucket
+
+name: Deploying GCP resources using Terraform
+
+on:
+push:
+  branches:
+    - main
+  workflow_dispatch:
+
+  jobs:
+  deploy:
+    run-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Authenticate with google cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secret.GCLOUD_SERVICE_KEY }}
+
+      - name: Set-up gcloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: poc-ad-target-env-413614
+
+      - name: Verifying Authentication
+        run: gcloud auth list
+
+      - name: Deploy to GCS
+        run: gsutil -r cp . gs://test-bucket
