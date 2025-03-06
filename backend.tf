@@ -1,5 +1,5 @@
 terraform {
-  backend "state_file" {
+  backend "gcs" {
     prefix = "terraform"
     google_storage_bucket = "terraform_state"
   }
