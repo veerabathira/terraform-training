@@ -56,7 +56,7 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    environment: production
+    environment: pre-prod
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
@@ -82,8 +82,6 @@ jobs:
       with:
         project_id: poc-ad-target-env-413614
 
-    - name: Verify Authentication
-      run: gcloud auth list
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
