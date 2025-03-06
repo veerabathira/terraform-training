@@ -11,5 +11,4 @@ provider "google" {
   project = "poc-ad-target-env-413614"
   region = "northamerica-northeast1"
   zone = "northamerica-northeast1-a"
-  credentials = "key.json"
 }
