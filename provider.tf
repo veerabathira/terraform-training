@@ -6,7 +6,6 @@ terraform {
     }
   }
 }
-
 provider "google" {
   project = "poc-ad-target-env-413614"
   region = "northamerica-northeast1"
