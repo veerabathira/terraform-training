@@ -11,7 +11,7 @@ permissions:
 jobs:
   terraform:
     name: 'Terraform'
-    runs-on: centos-latest
+    runs-on: ubuntu-latest
     environment: pre-prod
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
