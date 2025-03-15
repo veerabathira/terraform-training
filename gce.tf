@@ -13,8 +13,8 @@ resource "google_compute_instance" "gce_1" {
     }
 
     network_interface {
-      network = "default"
-      subnetwork = "default"
+      network = google_compute_network.gcn-1.id
+      subnetwork = google_compute_subnetwork.sub-us.id
     }
     depends_on = [google_compute_subnetwork.sub-us]
 }
