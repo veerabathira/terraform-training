@@ -1,4 +1,4 @@
-
+/*
 resource "google_compute_network" "gcn-1" {
   name = "first-network"
   auto_create_subnetworks = false
@@ -11,7 +11,7 @@ resource "google_compute_subnetwork" "sub-us" {
   region = "us-east1"
 }
 
-/*
+
 resource "google_compute_firewall" "firewall-basic" {
   name    = "demo-firewall"
   network = google_compute_network.gcn-1.id
