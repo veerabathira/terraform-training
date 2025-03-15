@@ -24,5 +24,4 @@ resource "google_compute_firewall" "firewall-basic" {
     ports = ["22", "80"]
   }
 
-  source_ranges = [google_compute_subnetwork.sub-us.ip_cidr_range]
 }
