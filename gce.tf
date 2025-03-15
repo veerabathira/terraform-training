@@ -13,8 +13,8 @@ resource "google_compute_instance" "gce_1" {
     }
 
     network_interface {
-      network    = "first-network"
-      subnetwork = "sub-us"
+      network    = google_compute_network.gcn-1.self_link
+      subnetwork = google_compute_subnetwork.sub-us.self_link
       access_config {}
     }
 }
