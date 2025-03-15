@@ -8,7 +8,7 @@ resource "google_compute_instance" "gce_1" {
     boot_disk {
       initialize_params {
         image = "rocky-linux-8-optimized-gcp-arm64-v20250212"
-        size  = "10"
+        size  = "20"
       }
     }
 
