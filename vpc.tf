@@ -14,10 +14,7 @@ resource "google_compute_subnetwork" "sub-us" {
 resource "google_compute_firewall" "firewall-basic" {
   name    = "demo-firewall"
   network = google_compute_network.gcn-1.id
-
-  allow {
-    protocol = "icmp"
-  }
+  direction = "engress"
 
   allow {
     protocol = "tcp"
