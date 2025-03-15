@@ -13,8 +13,8 @@ resource "google_compute_instance" "gce_1" {
     }
 
     network_interface {
-      network    = "default"
-      access_config {}
+      network = "default"
+      subnetwork = "default"
     }
 }
   
