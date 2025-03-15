@@ -1,5 +1,5 @@
 resource "google_compute_instance" "gce_1" {
-    name = "Apache-server"
+    name = "apache-server"
     machine_type = "n1-standard-1"
     zone = "us-east1-b"
     metadata_startup_script = "yum install httpd -y; systemctl enable httpd; systemctl start httpd"
