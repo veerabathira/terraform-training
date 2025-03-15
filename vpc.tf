@@ -1,4 +1,4 @@
-/*
+
 resource "google_compute_network" "gcn-1" {
   name = "first-network"
   auto_create_subnetworks = false
@@ -17,4 +17,3 @@ resource "google_compute_firewall" "firewall-basic" {
   network = google_compute_network.gcn-1.id
   direction = "INGRESS"
 }
- */

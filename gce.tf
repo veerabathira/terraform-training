@@ -16,5 +16,6 @@ resource "google_compute_instance" "gce_1" {
       network = "default"
       subnetwork = "default"
     }
+    depends_on = [google_compute_subnetwork.sub-us]
 }
   
