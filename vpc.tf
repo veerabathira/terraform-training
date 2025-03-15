@@ -16,4 +16,9 @@ resource "google_compute_firewall" "firewall-basic" {
   name    = "demo-firewall"
   network = google_compute_network.gcn-1.id
   direction = "INGRESS"
+
+  allow {
+    protocol = "tcp"
+    ports = ["22"]
+  }
 }
