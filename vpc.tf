@@ -8,6 +8,7 @@ resource "google_compute_subnetwork" "sub-us" {
   name = "first-sub"
   network = google_compute_network.gcn-1.id
   region = "us-east1"
+  ip_cidr_range = "172.10.10.0/24"
 }
 
 
