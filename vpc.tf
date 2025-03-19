@@ -5,8 +5,8 @@ resource "google_compute_network" "gcn-1" {
 }
 
 resource "google_compute_subnetwork" "sub-us" {
-  name = "sub-us"
-  network = google_compute_network.gcn-1.self_link
+  name = "first-sub"
+  network = google_compute_network.gcn-1.id
   region = "us-east1"
 }
 
