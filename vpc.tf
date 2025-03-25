@@ -1,14 +1,14 @@
 
 resource "google_compute_network" "gcn-1" {
-  name = "first-network"
+  name = var.network_name
   auto_create_subnetworks = false
 }
 
 resource "google_compute_subnetwork" "sub-us" {
-  name = "first-sub"
+  name = var.subnetwork_name
   network = google_compute_network.gcn-1.id
-  region = "us-east1"
-  ip_cidr_range = "172.10.10.0/24"
+  region = var.region_name
+  ip_cidr_range = var.cidr_range
 }
 
 
