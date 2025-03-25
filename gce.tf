@@ -18,4 +18,4 @@ resource "google_compute_instance" "gce_1" {
     }
     depends_on = [google_compute_subnetwork.sub-us]
 }
-  
+
