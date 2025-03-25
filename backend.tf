@@ -2,6 +2,6 @@
 terraform {
   backend "gcs" {
     prefix = "terraform"
-    bucket = "terraform_trining_state"
+    bucket = "my-terraform-bucket-2025"
   }
 }
